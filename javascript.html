@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+        </title>
+        <script>
+            // Declare Variables
+            var miles;
+            var gallons;
+
+            while(isNaN(miles)) {
+                miles = prompt("How many miles have you drove?");
+            }
+            miles=parseFloat(miles);
+            while (isNaN(gallons)) {
+                gallons= prompt("How many gallons of gas did you use?");
+            }
+            gallons=parseFloat(gallons);
+            //            if((isNaN(miles)) || (isNaN(gallons))) {
+            //                alert("That is not a number, I just can't work under these conditions!");
+            //            } else {
+            //                miles=parseFloat(miles);
+            //                gallons=parseFloat(gallons);
+            //            }
+
+            var mpg = miles/gallons;
+            mpg=parseInt(mpg);
+            alert("You drove " + mpg + " miles per gallon.");
+
+            //            // References Eric
+            //            var thisPerson = students[3];
+
+            // Adding element to an array
+            students[students.length] = "nae";
+
+            // Adding element using .push method
+            students.push("me");
+
+            // Removes last element from array
+            students.pop();
+
+            var seasons=["Spring","Summer","Fall","Winter"];
+            alert(seasons.length);
+            alert(seasons[seasons.length-1]);
+            seasons.push("Margarita");
+            alert(seasons.length);
+            alert(seasons[seasons.length-1]);
+
+            var seasonList="";
+
+            for (var i=0; i < seasons.length; i++) {
+                seasonList+=seasons[i] + "<br>";
+            }
+            
+ document.getElementById("seasons").innerHTML=seasonList;
+        </script>
+    </head>
+    <body>
+        <div id="Seasons">
+
+        </div>
+    </body
+        </html>
