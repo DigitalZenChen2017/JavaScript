@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script>
+            var $ = function(id) {
+                return document.getElementById(id);
+            }
+
+            function showGreeting() {
+                var greetings = "";
+                var language = $("language").value;
+                language = language.toLowerCase();
+
+                switch(language) {
+                    case "english": 
+                        greetings = "Good Morning<br>Good Afternoon<br>Good Night";
+                        break;
+                    case "spanish":
+                        greetings = "Buenos Dias<br>Buenos Tardes<br>Buenos Noches";
+                        break;
+                    case "french":
+                        greetings = "Bonjour<br>Bonne après-midi<br>Bonne nuit";
+                        break;
+                    case "russian":
+                        greetings = "Dobroye utro<br>Dobryy den'<br>Dobroy nochi";
+                        break;
+                    default:
+                        greetings = "C'mon bro or sista! That ain't a freakin' language!"
+                } $("displayGreetings").innerHTML=greetings;
+            }
+        </script>
+    </head>
+
+    <body>
+        <section>
+            <form id = "Greetings">
+                <label for="language">Language:</label>
+                <input type="text" name="language" id="language">
+                <input type="button" name="greeting" value="Show Greeting" onclick="showGreeting();">
+            </form>
+            <div>
+                <h1 id = "displayGreetings">Greetings will appear here</h1>
+            </div>
+        </section>
+    </body>
+</html>
