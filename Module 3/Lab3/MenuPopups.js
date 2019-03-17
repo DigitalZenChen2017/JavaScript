@@ -1,29 +1,46 @@
-
 // Create a new div element that will be used as the popup.
-var popdiv = document.createElement("div");
-popdiv.id = "menumessage";
-popdiv.textContent = "default text for testing";
-popdiv.style.color = "orange";
-popdiv.style.border = "1px solid white";
-popdiv.style.borderRadius = "10px";
-popdiv.style.backgroundColor = "black";
-popdiv.style.position = "absolute";
-popdiv.style.padding = "10px";
-popdiv.style.display = "none";
-// popdiv.style.transformOrigin ="0 0";
-// popdiv.style.transform = "rotate(15deg)";
-document.body.appendChild(popdiv);
+//var popdiv = document.createElement("div");
+//popdiv.id = "menumessage";
+//popdiv.textContent = "default text for testing";
+//popdiv.style.color = "orange";
+//popdiv.style.border = "1px solid white";
+//popdiv.style.borderRadius = "10px";
+//popdiv.style.backgroundColor = "black";
+//popdiv.style.position = "absolute";
+//popdiv.style.padding = "10px";
+//popdiv.style.display = "none";
+//// popdiv.style.transformOrigin ="0 0";
+//// popdiv.style.transform = "rotate(15deg)";
+//document.body.appendChild(popdiv);
+var popdivcss = {
+    color: "orange",
+    border: "1px solid white",
+    borderRadius: "10px",
+    backgroundColor: "black",
+    position: "absolute",
+    padding: "10px",
+    display: "block"
+}
+
+var popdiv = $("<div/>", {
+    id: "menumessage",
+    text: "default text for testing"}).css(popdivcss);
+$("body").append(popdiv);
 
 //var topnav = document.getElementById("topNav");
 //var tabs = topnav.getElementsByTagName("a");
 // alternate to the previous two lines
-var tabs = document.querySelectorAll("#topNav a");
+//var tabs = document.querySelectorAll("#topNav a");
+//
+//for (var index = 0; index < tabs.length; index++) {
+//    var tab = tabs[index];
+//    tab.onmouseenter=function() {ShowPopup(this)}
+//    tab.onmouseleave=function() {HidePopup()}
+//}
 
-for (var index = 0; index < tabs.length; index++) {
-    var tab = tabs[index];
-    tab.onmouseenter=function() {ShowPopup(this)}
-    tab.onmouseleave=function() {HidePopup()}
-}
+$("#topNav a").
+    mouseenter(function() {ShowPopup(this)}).
+    mouseleave(function() {HidePopUp()})
 
 function ShowPopup(tab)
 {
@@ -46,6 +63,8 @@ function ShowPopup(tab)
         case "Sports":
             popuptext = "See our new line of sporting goods!";
             break;
+        case "More Information":
+            poptext = "Interested in more information? Here's a form. "
         default:
             popuptext = "";
             break;
@@ -67,4 +86,3 @@ function HidePopup()
     var popdiv = document.getElementById("menumessage");
     popdiv.style.display = "none";   
 }
-

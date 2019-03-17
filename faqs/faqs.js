@@ -20,7 +20,7 @@ window.onload=function() {
             if(h2.nextElementSibling.getAttribute ("class") === "closed") {
                 h2.nextElementSibling.setAttribute("class", "open");
             }   else { h2.nextElementSibling.setAttribute("class", "closed");
-            }3
+            }
         }
     }
 }
