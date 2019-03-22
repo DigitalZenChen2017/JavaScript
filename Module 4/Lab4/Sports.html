@@ -36,7 +36,7 @@
             <br>
             <br>
             Select a color: 
-            <select id="bikecolor">
+            <select id="bikecolor" onchange="GetBikes(this);">
                 <option value="">Select a bike color...</option>
                 <option value="">All</option>
                 <option>Black</option>
@@ -44,7 +44,8 @@
                 <option>Green</option>
                 <option>Red</option>
                 <option>Silver</option>
-                <option>Yellow</option>                
+                <option>Yellow</option>
+                
             </select>
             <br>
 
@@ -66,7 +67,10 @@
 <script>
     // Add code here to add the event handler function below to 
     // to the select list's 
-
+    (function() {
+        var selColor = document.getElementById("bikecolor");
+        selColor.onchange = function() {GetBikes(this);}
+})();
 
 
     // Add an event handler function here to fetch the Bikes data
@@ -75,16 +79,18 @@
     function GetBikes(select)
     {
         // get the color from the dropdown list 
-
-
+        var color = select.options[select.selectedIndex].value;
+        
+        
 
         // build the odata filter query string
-
-
-
+        var filter = "";
+        if (color!= ""){
+            filter="?$filter=color eq '" + color + "'";
+        }
         // use jQuery to make the Ajax call
 
-    }
+  
 
 
         // Write a function to be called from the Ajax success function. 

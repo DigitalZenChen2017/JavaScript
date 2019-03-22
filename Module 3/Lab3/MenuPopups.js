@@ -39,8 +39,8 @@ $("body").append(popdiv);
 //}
 
 $("#topNav a").
-    mouseenter(function() {ShowPopup(this)}).
-    mouseleave(function() {HidePopUp()})
+mouseenter(function() {ShowPopup(this)}).
+mouseleave(function() {HidePopUp()})
 
 function ShowPopup(tab)
 {
