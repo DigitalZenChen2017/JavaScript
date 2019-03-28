@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src = "file2.js"></script>
-</head>
-<body>
-</body>
+    <head>
+        <script src = "file2.js"></script>
+        <style>
+            #getfocus:focus {
+                color: hotpink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "textBox">
+            <p>This is sample text!
+            </p>
+        </div>
+        <input id="getfocus" type="button" onclick="getFocus()" value="Get Focus">
+        <select id = "dropdown">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+        <script>
+            function getFocus() {document.getElementById("getfocus").focus();
+                                }
+
+            document.getElementById("dropdown").disabled = true;
+        </script>
+    </body>
 </html>
