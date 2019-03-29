@@ -19,11 +19,14 @@
                                 xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue + "<br>" +
                                 xmlDoc.getElementsByTagName("bio")[i].childNodes[0].nodeValue + "<br><br>";
                         }
-                        document.getElementById("team").innerHTML = html; 
+                        document.getElementById("team").innerHTML = html;
                     }
                 };
                 xhr.open("GET", "team.xml", true);
                 xhr.send();
+                // v
+                var 1stNumber;
+                
             });
         </script>
     </head>
