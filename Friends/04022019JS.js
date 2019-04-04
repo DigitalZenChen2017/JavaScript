@@ -61,24 +61,42 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.*/
 //    }
 //}
 // Changing Case - 21
-var alert;
-var prompt;
-var userCity = prompt("What's one of the cleanest cities in the United States?");
-var cleanestCities = ["cheyenne", "santa fe", "tucson", "great falls", "honolulu"];
-
-for (var i = 0; i < cleanestCities.length; i++) {
-    if (userCity.toLowerCase() === cleanestCities[i]) {
-        var firstChar = userCity.slice(0, 1);
-        var otherChar = userCity.slice(1);
-        firstChar.toUpperCase();
-        otherChar.toLowerCase();
-        var newTitleCaseCity = firstChar + otherChar;
-        alert(newTitleCaseCity + " is one of the cleanest cities in the United States!");
-    }
-}
+//var alert;
+//var prompt;
+//var userCity = prompt("What's one of the cleanest cities in the United States?");
+//var cleanestCities = ["cheyenne", "santa fe", "tucson", "great falls", "honolulu"];
+//
+//for (var i = 0; i < cleanestCities.length; i++) {
+//    if (userCity.toLowerCase() === cleanestCities[i]) { // tucson --> "t" = firstChar and "ucson" = otherChar
+//        var firstChar = userCity.slice(0, 1);
+//        var otherChar = userCity.slice(1);
+//        firstChar.toUpperCase();
+//        otherChar.toLowerCase();
+//        var newTitleCaseCity = firstChar + otherChar;
+//        alert(newTitleCaseCity + " is one of the cleanest cities in the United States!");
+//    }
+//}
 
 //// Removing White Space in a String
 //str.replace(/\s+/g, '')
 
 // Strings: Measuring length and extracting parts
+
+// Strings: Finding a character at a location
+var alert;
+var firstName = "Boris";
+var firstChar = firstName.slice(0, 1);
+var firstChar2 = firstName.charAt(0); // "Boris" --> "B" for both methods/functions
+alert(firstChar);
+alert(firstChar2);
+
+//for (var i = 0; i < text.length; i++) {
+//    if (text.charAt(i) === "!") {
+//        alert("Exclamation point found!");
+//    }
+//}
+
+
+
+
 
