@@ -1,5 +1,7 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 var Vendor = /** @class */ (function () {
     function Vendor(id, code, name, address, city, state, zip, phoneNumber, email, preApproved) {
         this.id = id;

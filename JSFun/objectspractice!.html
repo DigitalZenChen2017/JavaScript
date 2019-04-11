@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Objects Practice - A Beginner's Guide &#40;newbies are welcome!&#41; </title>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            h1 {
-                font-size: 1.5em;
-            }
-        </style>
-        <script src = "objectspractice!.js"></script>
-    </head>
 
-    <body>
-        <div id = "rate"><p>This is a String</p></div>
+<head>
+    <title>Objects Practice - A Beginner's Guide &#40;newbies are welcome!&#41; </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h1 {
+            font-size: 1.5em;
+        }
+    </style>
+    <!-- <script src = "objectspractice!.js"></script> -->
+    <script>
+        var rightNow = new Date(); // Creation of Date Object
+        // Cannot use methods like charAt, indexOf, slice
+        var theDay = rightNow.getDay();
+        alert(theDay); // returns 2 ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var d = new Date();
+        var day = d.getDay();
+        var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        alert(daysOfWeek[day]);
+    </script>
+</head>
 
-    </body>
+<body>
+    <div id="rate">
+        <p>This is a String</p>
+    </div>
+</body>
 
 </html>
