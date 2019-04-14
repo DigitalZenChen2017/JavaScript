@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="jquery-3.4.0.js"></script>
+    <link rel="stylesheet" href="../jQuery/css/style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script src="" async defer></script>
+
+    <script>
+        $().ready(
+            function () {
+                // // tablesJS = document.getElementsByTagName("table");
+                tablesJQ = $("table"); // accepts CSS selector
+                // // alert(1);
+                // // tablesQS = document.querySelector("table"); // returns first table element found
+
+                // // Applies CSS to every table in jQuery selector
+                tablesWithBorders = tablesJQ.css("border", "1px red solid").css("color", "green");
+
+                // greenTables = tablesWithBorders.css("color", "green");
+                // greenTables.css
+
+                // // Sets variable to document function and defines it as jQuery
+                // var x = document.getElementById("fred");
+                // $(x).css;
+
+                // for (var i = 0; i < tablesJQ.length; i++) {
+                //     tablesJQ[i].css("border", "red");
+                // }
+
+                $("table").each(function () {
+                    alert("Table has " + this.rows.length + " rows.")
+                }).css("border", "5px purple dotted");
+            }
+        )
+    </script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    <table>
+        <tr>
+            <th>Products</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Gimbal Stabilizer</th>
+            <td>2</td>
+            <td>99.99</td>
+        </tr>
+        <tr>
+            <td>DSLR Camera</th>
+            <td>2</td>
+            <td>479.99</td>
+        </tr>
+        <tr>
+            <td>Tripod</th>
+            <td>1</td>
+            <td>89.99</td>
+        </tr>
+        <tr>
+            <td>MacBook Pro</th>
+            <td>1</td>
+            <td>2049.99</td>
+        </tr>
+
+    </table>
+    <table data-category="toys">
+        <tr>
+            <th>Products</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Gimbal Stabilizer</th>
+            <td>2</td>
+            <td>99.99</td>
+        </tr>
+        <tr>
+            <td>DSLR Camera</th>
+            <td>2</td>
+            <td>479.99</td>
+        </tr>
+        <tr>
+            <td>Tripod</th>
+            <td>1</td>
+            <td>89.99</td>
+        </tr>
+        <tr>
+            <td>MacBook Pro</th>
+            <td>1</td>
+            <td>2049.99</td>
+        </tr>
+        <tr>
+            <td colspan=3 id="table2lastrow">This has a colspan of 3</td>
+        </tr>
+
+        <p>Date: <input type="text" id="datepicker"></p>
+
+
+    </table>
+</body>
+
+</html>
