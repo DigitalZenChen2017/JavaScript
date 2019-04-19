@@ -10,6 +10,7 @@ import { SuccessalertComponent } from './successalert/successalert.component';
 import { UserListComponent } from './feature/user/user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { UserService } from './service/user.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { UserService } from './service/user.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [
     UserService

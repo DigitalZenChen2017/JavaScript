@@ -1,3 +1,18 @@
-<button class="btn btn-primary">Add Server</button>
+<label>Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<!--Step 1: Two-Way Binding-->
+<input type="text" class="form-control" [(ngModel)]="userName">
+<!--Step 2: String Interpolation Example-->
+<!-- <p [innerText]="userName"></p> -->
+<p>{{userName}}</p>
+<!--Step 3: Event and Property Binding - Enable Button only if username is NOT an empty string-->
+<button class="btn btn-primary" [disabled]="userName === ''" (click)="userName = ''">Reset User</button>
+
+<!-- <p>{{ serverName }}</p> -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<!-- <p [innerText]="allowNewServer"></p>
+<p>{{ serverCreationStatus }}</p> -->
+<p * ngIf='serverCreated'>Server was created, serve name is {{ serverName }} </p>
 <app-server></app-server>
-<app-server></app-server> 
+<app-server></app-server>
