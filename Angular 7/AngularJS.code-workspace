@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "JavaScript/MarkMyersJS"
+		},
+		{
+			"path": "JavaScript/AngularJS"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AngularJS"
+	}
+}
